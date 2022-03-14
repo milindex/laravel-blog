@@ -1,16 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
-    "/img/logo.png": "/img/logo.png",
-    "/img/fire-icon.svg": "/img/fire-icon.svg",
-    "/img/logo_200x72.png": "/img/logo_200x72.png",
-    "/img/twitter_icon.svg": "/img/twitter_icon.svg",
-    "/img/twitter_icon copy.svg": "/img/twitter_icon copy.svg",
-    "/img/github.svg": "/img/github.svg",
-    "/img/Unconfirmed 226129.crdownload": "/img/Unconfirmed 226129.crdownload",
-    "/img/linkedin-brands.svg": "/img/linkedin-brands.svg",
-    "/img/Unconfirmed 474768.crdownload": "/img/Unconfirmed 474768.crdownload",
     "/img/at-mail.svg": "/img/at-mail.svg",
-    "/img/Unconfirmed 691093.crdownload": "/img/Unconfirmed 691093.crdownload",
-    "/img/instagram-brands.svg": "/img/instagram-brands.svg"
+    "/img/fire-icon.svg": "/img/fire-icon.svg",
+    "/img/github.svg": "/img/github.svg",
+    "/img/instagram-brands.svg": "/img/instagram-brands.svg",
+    "/img/linkedin-brands.svg": "/img/linkedin-brands.svg",
+    "/img/logo_200x72.png": "/img/logo_200x72.png",
+    "/img/twitter_icon.svg": "/img/twitter_icon.svg"
 }
