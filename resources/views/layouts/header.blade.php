@@ -4,17 +4,20 @@
             <img class="text-xl ml-3 w-36" src="{{ asset('img/logo_200x72.png') }}" alt="">
         </a>
         <div class="lg:ml-auto mt-5 lg:mt-0 flex items-center">
-            <a href="{{ url('/trending')}}" class="ml-0 no-underline hover:underline uppercase flex justify-center items-center">What's Hot!
+            @if(Auth::check())
+            <a href="/blog/create" class="hidden md:inline ml-0 rounded-lg px-4 py-2 border-2 border-primary text-primary hover:bg-primary hover:text-red-100 duration-300">Write a Post</a>
+            @endif
+            <a class="ml-0 md:ml-5 no-underline hover:underline uppercase flex justify-center items-center" href="{{ url('/trending')}}">What's Hot!
                 @svg('img/fire-icon.svg', 'w-6 h-6 inline align-bottom')
             </a>
-            <a href="{{ url('/about')}}" class="ml-5 no-underline hover:underline uppercase">About</a>
             @guest
             <a class="ml-5 no-underline hover:underline uppercase" href="{{ route('login') }}">{{ __('Login') }}</a>
             @if (Route::has('register'))
             <a class="ml-5 no-underline hover:underline uppercase" href="{{ route('register') }}">{{ __('Register') }}</a>
             @endif
             @else
-            <span>{{ Auth::user()->name }}</span>
+            <a class="ml-5 no-underline hover:underline uppercase" href="#">{{ Auth::user()->name }}</a>
+            {{-- <a class="ml-5 no-underline hover:underline uppercase" href="{{ route('profile') }}">{{ Auth::user()->name }}</a> --}}
 
             <a href="{{ route('logout') }}" class="ml-5 no-underline hover:underline uppercase" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">

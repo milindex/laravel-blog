@@ -40,5 +40,20 @@ class BladeSVGProvider extends ServiceProvider
 
             return $output;
         });
+
+        // Read Time from String
+        Blade::directive('get_read_time', function($arguments) {
+            $text = $arguments;
+            $wordCount = str_word_count($text); // getting the number of words
+            $minutesToRead = round($wordCount / 200);// getting the number of minutes
+            if( $minutesToRead < 1 || $minutesToRead == 1 ){// if the time is less than a minute
+                $minutes = '1 min read';
+            }
+            else{
+                $minutes = $minutesToRead . 'mins read';// saving the time in the variable
+            }
+            return $minutes;
+        });
+
     }
 }

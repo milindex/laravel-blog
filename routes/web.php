@@ -17,7 +17,15 @@ use App\Http\Controllers\PostsController;
 
 Route::get('/', [Pagescontroller::class, 'index']);
 
+Route::resource('/', PostsController::class, [
+    'only' => ['index']
+]);
+
 Route::resource('/blog', PostsController::class);
+
+Route::get('/blog', function () {
+    return redirect('/');
+});
 
 Auth::routes();
 
