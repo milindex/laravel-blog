@@ -1,3 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.socials{
+    a{
+        svg{
+            height: 24px;
+            width: 24px;
+            fill: #fff;
+        }
+    }
+}

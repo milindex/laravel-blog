@@ -11,26 +11,14 @@ const mix = require('laravel-mix');
 |
 */
 
-function findFiles(dir) {
-    const fs = require('fs');
-    return fs.readdirSync(dir).filter(file => {
-        return fs.statSync(`${dir}/${file}`).isFile();
+mix.js('resources/js/app.js', 'public/js')
+    .sass('resources/scss/app.scss', 'public/css')
+    .postCss('resources/css/app.css', 'public/css', [
+        //
+        require("tailwindcss"),
+    ])
+    .copyDirectory('resources/img', 'public/img')
+    .browserSync({
+        proxy: 'ms-laravel-clone.test',
+        files: ["resources/scss/*.scss", "resources/js/*.js", "resources/views/*.php"]
     });
-}
-
-function buildSass(dir, dest) {
-    findFiles(dir).forEach(function (file) {
-        if ( ! file.startsWith('_')) {
-            mix.sass(dir + '/' + file, dest);
-        }
-    });
-}
-
-mix.js('resources/js/app.js', 'public/js');
-
-buildSass('resources/scss', 'public/css');
-
-mix.postCss('resources/css/app.css', 'public/css', [
-    //
-    require("tailwindcss"),
-]);
