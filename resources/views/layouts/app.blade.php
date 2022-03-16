@@ -15,7 +15,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="h-screen antialiased leading-none font-sans">
+<body class="h-screen antialiased leading-none font-sans m-0">
     <div id="app">
         <header class="sticky top-0 z-50 bg-primary-gray border-t border-primary bottom-2">
             @include('layouts.header')

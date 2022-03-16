@@ -12,8 +12,8 @@
             </div>
             @endif
 
-            <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-sm sm:shadow-lg">
-                <header class="font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
+            <section class="flex flex-col break-words bg-white sm:border-1 sm:rounded-md sm:shadow-lg">
+                <header class="font-semibold bg-accent-gitlab text-white py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md">
                     {{ __('Verify Your Email Address') }}
                 </header>
 
@@ -24,7 +24,7 @@
 
                     <p>
                         {{ __('If you did not receive the email') }}, <a
-                            class="text-blue-500 hover:text-blue-700 no-underline hover:underline cursor-pointer"
+                            class="text-secondary hover:text-primary no-underline hover:underline cursor-pointer"
                             onclick="event.preventDefault(); document.getElementById('resend-verification-form').submit();">{{ __('click here to request another') }}</a>.
                     </p>
 

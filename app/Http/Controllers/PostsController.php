@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 
 class PostsController extends Controller
 {
@@ -17,8 +18,7 @@ class PostsController extends Controller
         //
         // $post = Post::all();
         // dd($post);
-        return view('index')
-            ->with('posts', Post::orderBy('updated_at', 'DESC')->get());
+        return view('index')->with('posts', Post::orderBy('updated_at', 'DESC')->get());
     }
 
     /**
@@ -29,7 +29,10 @@ class PostsController extends Controller
     public function create()
     {
         //
-        return view('blog.create');
+
+        $categories = Post::distinct('categories')->pluck('categories');
+
+        return view('blog.create')->with('categories', $categories);
     }
 
     /**
@@ -40,19 +43,43 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
-        //
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'image_path' => 'required|mimes:png,jpg,jpeg|max:2048',
+            'categories' => 'required',
+            'tags' => ''
+        ]);
+
+        $slug = SlugService::createSlug(Post::class, 'slug', $request->title);
+
+        $newImageName = uniqid() . '-' . $slug . '.' . $request->image_path->extension();
+
+        $request->image_path->move(public_path('post_images'), $newImageName);
+
+        Post::create([
+            'title' => $request->input('title'),
+            'slug' => $slug,
+            'description' => $request->input('description'),
+            'image_path' => $newImageName,
+            'user_id' => auth()->user()->id,
+            'tags' => $request->input('tags'),
+            'categories' => $request->input('categories')
+        ]);
+
+        return redirect('/')->with('message', 'Your post has been added');
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $slug
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        return view('blog.show')->with('post',Post::where('slug', $slug)->first());
     }
 
     /**
