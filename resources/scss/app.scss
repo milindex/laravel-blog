@@ -10,3 +10,25 @@ header{
         }
     }
 }
+
+.single-blog-shaddow{
+    transition: transform .3s cubic-bezier(.34,2,.6,1),box-shadow .2s ease,-webkit-transform .3s cubic-bezier(.34,2,.6,1);
+    box-shadow: 0 2px 4px 0 rgb(0, 0, 0, 10%);
+    &:hover{
+        box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 12%), 0 2px 4px 0 rgb(0, 0, 0 , 8%);
+        transform: translateY(-5px);
+    }
+}
+
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+.form-input,
+.form-checkbox{
+    outline: none;
+    box-shadow: 0 0 0 3px rgb(164, 202, 254, 45%);
+    border-color: #a4cafe;
+}
