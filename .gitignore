@@ -32,3 +32,4 @@ docker-compose.override.yml
 .env.example
 public/img/*.*
 public/post_images/*.*
+public/js/*.*
