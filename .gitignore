@@ -30,3 +30,5 @@ docker-compose.override.yml
 /.idea
 /.vscode
 .env.example
+public/img/*.*
+public/post_images/*.*
