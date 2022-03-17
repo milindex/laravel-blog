@@ -1,6 +1,18 @@
 @if(Auth::check())
-<div class="h-8 bg-accent-github text-white flex flex-wrap justify-center items-center">
-    This will be an admin bar for the authorised users!
+<div class="h-8 bg-accent-github text-white flex flex-wrap items-center">
+
+    <div class="container mx-auto lg:max-w-screen flex flex-wrap justify-end">
+        <div class="post-actions flex flex-wrap">
+            @if ($post)
+                @if (isset(Auth::user()->id) && Auth::user()->id == $post->user_id)
+                    <a href="/blog/{{ $post->slug }}/edit" class="px-2">Edit Post</a>
+                    <a href="/blog/{{ $post->slug }}/delete" class="px-2">Delete Post</a>
+                @endif
+            @endif
+        </div>
+        <a href="/blog/{{ $post->slug }}/delete" class="px-2 border-0 hover:border-b-2 hover:border-secondary ">Log Out</a>
+    </div>
+
 </div>
 @endif
 <div class="container mx-auto px-5 py-2 lg:max-w-screen">
