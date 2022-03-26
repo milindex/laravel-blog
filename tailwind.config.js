@@ -14,6 +14,7 @@ module.exports = {
             colors:{
                 primary: '#E20727',
                 secondary: '#DC3D3A',
+                'primary-soft': '#E63F3F',
                 'primary-gray': '#F8F9F9',
                 'accent-twitter': '#29A2F0',
                 'accent-instagram': '#BF3483',

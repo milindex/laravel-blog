@@ -10,24 +10,20 @@
                 </div>
                 <div class="p-5">
                     <div class="text-sm uppercase text-primary font-bold">Resources</div>
-                    <a class="my-3 block" href="/#">Documentation <span
-                            class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Tutorials
-                        <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Support
-                        <span class="text-teal-600 text-xs p-1">New</span></a>
+                    <a class="my-3 block" href="/#">Documentation</a>
+                    <a class="my-3 block" href="/#">Tutorials </a>
+                    <a class="my-3 block" href="/#">Support <span class="text-primary-soft text-xs p-1">New</span></a>
                 </div>
                 <div class="p-5">
                     <div class="text-sm uppercase text-primary font-bold">Support</div>
-                    <a class="my-3 block" href="/#">Help Center <span
-                            class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Privacy
-                        Policy <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block"
-                        href="/#">Conditions
-                        <span class="text-teal-600 text-xs p-1"></span></a>
+                    <a class="my-3 block" href="/#">Help Center</a>
+                    <a class="my-3 block" href="/#">Privacy Policy </a>
+                    <a class="my-3 block" href="/#">Conditions </a>
                 </div>
                 <div class="p-5">
                     <div class="text-sm uppercase text-primary font-bold">Contact us</div>
-                    <a class="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA <span
-                            class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block"
-                        href="/#">contact@company.com <span class="text-teal-600 text-xs p-1"></span></a>
+                    <a class="my-3 block" href="https://milindsonawane.in">milindsonawane.in</a>
+                    <a class="my-3 block" href="mailto:contact@milindsonawane.in">contact@milindsonawane.in</a>
                 </div>
             </div>
         </div>

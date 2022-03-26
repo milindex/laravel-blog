@@ -1,4 +1,4 @@
-@if(Auth::check())
+{{-- @if(Auth::check())
 <div class="h-8 bg-accent-github text-white flex flex-wrap items-center">
 
     <div class="container mx-auto lg:max-w-screen flex flex-wrap justify-end">
@@ -14,11 +14,11 @@
     </div>
 
 </div>
-@endif
+@endif --}}
 <div class="container mx-auto px-5 py-2 lg:max-w-screen">
     <div class="flex items-center flex-col lg:flex-row">
         <a href="{{ url('/') }}" class="flex items-center no-underline text-brand text-primary uppercase font-bold text-xl">
-            <img class="text-xl ml-3 w-auto" src="{{ asset('img/logo_52x52.png') }}" alt="">
+            <img class="text-xl ml-3 w-auto" src="{{ asset('img/logo_52x52.png') }}" alt="Milind's Thoughts">
             <div class="break-words w-32 flex text-center">
                 Milind's Thoughts
             </div>

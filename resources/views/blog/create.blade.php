@@ -11,7 +11,7 @@
             @endforeach
         </ul>
     @endif
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.css">
+
     <h1 class="text-2xl md:text-3xl font-medium mb-2">Create a new Post!</h1>
     <div class="p-6">
         <div class="grid lg:grid-cols-1 gap-4 lg:max-w-2xl">

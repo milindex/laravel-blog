@@ -1,14 +1,9 @@
 require('./bootstrap');
 
+import * as editor from './editor';
+
 console.log("READY");
 
-import FroalaEditor from 'froala-editor'
-import 'froala-editor/js/plugins/align.min.js'
-
-// Initialize editor.
-let init = new FroalaEditor('#post-description')
-
-console.log(init);
-
+editor.render();
 
 console.log("END");
